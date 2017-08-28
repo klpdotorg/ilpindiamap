@@ -1,4 +1,4 @@
-## Start Development Sever
+## Start Development Server
 
 ```
 npm start
