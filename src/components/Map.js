@@ -30,20 +30,23 @@ class Map extends React.Component {
     })
   }
 
+  handleMouseMove = (map, e) => {
+    const properties = e.features[0].properties;
+    console.log(properties);
+
+    this.setState({
+      hoverState: {
+        name: properties.NAME_1,
+        country: properties.NAME_0,
+        id: properties.ID_1
+      }
+    })
+
+    map.setFilter("state-fills-hover", ["==", "NAME_1", properties.NAME_1 || ""]);
+  }
+
   addEvents = (map) => {
-    map.on("mousemove", "state-fills", (e) => {
-      const properties = e.features[0].properties;
-
-      this.setState({
-        hoverState: {
-          name: properties.NAME_1,
-          country: properties.NAME_0,
-          id: properties.ID_1
-        }
-      })
-
-      map.setFilter("state-fills-hover", ["==", "NAME_1", properties.NAME_1 || ""]);
-    });
+    map.on("mousemove", "state-fills", this.handleMouseMove.bind(null, map));
 
     // Reset the state-fills-hover layer's filter when the mouse leaves the layer.
     map.on("mouseleave", "state-fills", () => {
