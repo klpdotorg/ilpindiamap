@@ -34,7 +34,7 @@ class Map extends React.Component {
 
     map.on('load', () => {
 
-      json('./src/data/india-states.geojson', (error, response) => {
+      json('https://raw.githubusercontent.com/klpdotorg/ilpindiamap/new-setup/src/data/india-states.geojson', (error, response) => {
         if (!error) {
 
           this.addSource(map, response) //add source of geojson
@@ -120,7 +120,7 @@ class Map extends React.Component {
     
     renderLayers(map);
 
-    json('./src/data/data.json', (error, response) => {
+    json('https://raw.githubusercontent.com/klpdotorg/ilpindiamap/new-setup/src/data/data.json', (error, response) => {
       if (!error) {
         this.statesData = response
 

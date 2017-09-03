@@ -30,7 +30,7 @@ class ColumnChart extends Component {
 	render() {
 
 		const { hoveredState } = this.props;
-		const { title, value } = this.props;
+		const { title, value } = this.state;
 
 		const config = {
 			chart: {
