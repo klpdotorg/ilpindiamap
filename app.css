@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+.tooltip {
+  position: absolute;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  background: white;
+  color: #000;
+  max-width: 300px;
+  font-size: 15px;
+  z-index: 9;
+  pointer-events: none;
+}
+.column-chart-y {
+  height: 20px;
+}
+
+.tooltip .header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.column-chart {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 200px;
+}
+
+.pie-chart {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 200px;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hover-state {
+  width: 300px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #6371d0;
+  border-radius: 3px;
+}
+
+.color-chart {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 200px;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+}
+
+.color-chart .color-chart-title {
+  margin-left: 5px;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.color-chart .color-chart-body {
+  padding: 8px;
+}
+.color-chart .color-status {
+  background: red;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 10px;
+  border: 2px solid #f0f0f0;
+}
+.color-chart .status-cont {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.loading-cont {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 254, 254, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,18 +1,30 @@
 {
-  "name": "ilp-india-map",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "mapbox-gl": "^0.39.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-mapbox-gl": "^2.2.0",
-    "react-scripts": "1.0.11"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --progress --hot --open",
+    "start-local": "webpack-dev-server --env.local --progress --hot --open",
+    "build:production": "NODE_ENV=production webpack bundle.js --optimize-minimize"
+  },
+  "dependencies": {
+    "d3-request": "^1.0.5",
+    "d3-scale": "^1.0.6",
+    "highcharts": "^5.0.14",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-highcharts": "^12.0.0",
+    "react-map-gl": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
+    "uglify-js-brunch": "^2.10.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^2.4.0",
+    "webpack-dev-server": "^2.4.0"
   }
 }
